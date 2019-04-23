@@ -76,11 +76,11 @@ app.service('roomHandler', ['$rootScope', function($rootScope) {
 					var furniparttile = $(
 						'[data-x=' + furnipartpositions[0] + '][data-y=' + furnipartpositions[1] + ']'
 					);
-					var top = parseInt($(furniparttile).css('top'));
-					var left = parseInt($(furniparttile).css('left'));
+					var tileTop = parseInt($(furniparttile).css('top'));
+					var tileLeft = parseInt($(furniparttile).css('left'));
 
-					$(this).css('top', (top-this.height) + 'px');
-					$(this).css('left', (left) + 'px');
+					$(this).css('top', (tileTop-this.height) + 'px');
+					$(this).css('left', (tileLeft) + 'px');
 
 					$(this).appendTo(furnielement);
 				});
